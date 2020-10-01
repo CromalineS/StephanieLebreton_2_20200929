@@ -1,0 +1,25 @@
+/* 
+bleu 		#0065FC
+bleu clair	#DEEBFF
+gris 		#F2F2F2
+*/
+
+@font-face
+{
+	font-family: 'Raleway';
+	src: url('polices/Raleway/Raleway-Regular.ttf') format('truetype');
+}
+
+body
+{
+	font-family: Raleway, Arial, Sans-Serif;
+}
+
+h1
+{
+	font-size: 1.5em;
+}
+h2
+{
+	font-size: 1.3em;
+}
