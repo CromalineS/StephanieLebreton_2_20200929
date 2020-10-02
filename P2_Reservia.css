@@ -19,6 +19,7 @@ body
 {
 	font-family: Raleway, Arial, Sans-Serif;
 	color: #000000;
+
 }
 h1
 {
@@ -30,12 +31,14 @@ h2
 	font-size: 1em;
 }
 
+/*bloc page*/
 #page
 {
 	width: 90%;
 	margin: auto;
 }
 
+/*header*/
 #head
 {
 	display: flex;
@@ -63,4 +66,101 @@ h2
 #head a:hover
 {
 	color: #000000;
+}
+
+/* formulaire de recherche */
+#search
+{
+
+}
+#form_search
+{
+	display: flex;
+	justify-content: flex-start;
+	align-items: stretch;			/*ajustement hauteurs des éléments de la barre de recherche*/
+}
+.icone_place
+{
+	border-radius: 15px 0 0 15px;
+	background-color: #F2F2F2;
+	padding: 10px 15px;
+}
+.search_text
+{
+	font-weight: bold;
+	padding: 10px;
+	border: solid 2px #F2F2F2;
+}
+.submit
+{
+	color: #FFFFFF;
+	font-weight: bold;
+	border-radius: 0 15px 15px 0;
+	border: solid 1px #0065FC;
+	background-color: #0065FC;
+	padding: 10px;
+	cursor: pointer;
+}
+
+/* filtres */
+#filtres
+{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-weight: bold;
+}
+#filtres form
+{
+	margin-left: 20px;
+}
+#filtres label
+{
+	width: 35px;			/* créa cercle */
+	height: 35px;			/* créa cercle */
+	border-radius: 50%;		/* créa cercle */
+	background-color: #DEEBFF;
+	display: flex;			/* pour centrage vertical et horizontal des icones dans le cercle → class .fas : margin auto */
+}
+#filtres select
+{
+	font-weight: bold;
+	padding: 10px;
+	width: 120%;
+	border: none;
+	cursor: pointer;
+}
+.form_filtre
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	border: solid 2px #F2F2F2;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+/* annonce résultat */
+#circle_info
+{
+	width: 20px;			/* créa cercle */
+	height: 20px;			/* créa cercle */
+	border-radius: 50%;		/* créa cercle */
+	border: solid 2px #F2F2F2;
+	display: flex;
+	margin-right: 20px;
+}
+#nb_results
+{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+/* icones : centrage vertical et horizontal dans les cercles flex & couleur */
+#filtres .fas, #nb_results .fas
+{
+	margin: auto;
+	color: #0065FC;	
 }

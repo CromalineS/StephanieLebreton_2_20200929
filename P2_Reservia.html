@@ -4,6 +4,7 @@
 	<head>
 		<meta chatrset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="P2_Reservia.css">
+		<script src="https://kit.fontawesome.com/992677c05a.js" crossorigin="anonymous"></script>
 		<title>Reservia</title>
 	</head>
 
@@ -28,55 +29,73 @@
 			</header>
 				
 			<section id="search">					<!-- SECTION 1 : recherche -->
-			
-				<form method="post" action="#"> 	<!-- recherche lieu -->
-					<p>
-						<label for="id_search"><img src="" alt="icone lieu" /></label>
-		            	<input type="search" name="search" id="id_search" /> <!-- id_search : identifiant permettant de lier le label à la zone de texte du formulaire = identifiant de l'élément HTML-->
-		            	<input type="image"> <!-- icone rechercher ou créer l'image ??? --><!-- un attribut pour relier le bouton à la zone de texte du formulaire ??? -->
+				
+				<form method="post" action="#" > 	<!-- recherche lieu -->
+					<p id="form_search">
+						<label for="id_search" class="icone_place"><i class="fas fa-map-marker-alt"></i></label>
+		            	<input type="search" name="search" id="id_search" class="search_text" value="Marseille, France" /> <!-- id_search : identifiant permettant de lier le label à la zone de texte du formulaire = identifiant de l'élément HTML-->
+		            	<input type="submit" value="Rechercher" class="submit"/>
 					</p>
 				</form>
 
-				<div>								<!-- filtres -->
+				<div id="filtres">								<!-- filtres -->
 					<p>Filtres</p>
 					<form method="post" action="#">	<!-- filtre 1 -->
-						<label for="id_filtre_1"><img src="" alt="icone filtre 1" /></label><br />
-						<select name="filtre_1" id="id_filtre_1">
-							<option value="economique" select>Économique</option>
-							<option value="choix_2">Choix 2</option>
-							<option value="choix_3">Choix 3</option>
-						</select>
+						<div class="form_filtre">
+							<label for="id_filtre_1"><i class="fas fa-money-bill-wave"></i></label><br />
+							<div>	<!-- enveloppe select pour masquer la flèche avec overflow hidden : select width 120% -->
+								<select name="filtre_1" id="id_filtre_1">
+									<option value="economique" select>Économique</option>
+									<option value="choix_2">Choix 2</option>
+									<option value="choix_3">Choix 3</option>
+								</select>
+							</div>
+						</div>
 					</form>
 					<form method="post" action="#">	<!-- filtre 2 -->
-						<label for="id_filtre_2"><img src="" alt="icone filtre 2" /></label><br />
-						<select name="filtre_2" id="id_filtre_2">
-							<option value="familial" select>Familial</option>
-							<option value="choix_2">Choix 2</option>
-							<option value="choix_3">Choix 3</option>
-						</select>
+						<div class="form_filtre">
+							<label for="id_filtre_2"><i class="fas fa-child"></i></label><br />
+							<div>
+								<select name="filtre_2" id="id_filtre_2">
+									<option value="familial" select>Familial</option>
+									<option value="choix_2">Choix 2</option>
+									<option value="choix_3">Choix 3</option>
+								</select>
+							</div>
+						</div>
 					</form>
 					<form method="post" action="#">	<!-- filtre 3 -->
-						<label for="id_filtre_3"><img src="" alt="icone filtre 3" /></label><br />
-						<select name="filtre_3" id="id_filtre_3">
-							<option value="romantique" select>Romantique</option>
-							<option value="choix_2">Choix 2</option>
-							<option value="choix_3">Choix 3</option>
-						</select>
+						<div class="form_filtre">
+							<label for="id_filtre_3"><i class="fas fa-heart"></i></label><br />
+							<div>
+								<select name="filtre_3" id="id_filtre_3">
+									<option value="romantique" select>Romantique</option>
+									<option value="choix_2">Choix 2</option>
+									<option value="choix_3">Choix 3</option>
+								</select>
+							</div>
+						</div>
 					</form>
 					<form method="post" action="#">	<!-- filtre 4 -->
-						<label for="id_filtre_4"><img src="" alt="icone filtre 4" /></label><br />
-						<select name="filtre_4" id="id_filtre_4">
-							<option value="animaux_autorises" select>Animaux autorisés</option>
-							<option value="choix_2">Choix 2</option>
-							<option value="choix_3">Choix 3</option>
-						</select>
+						<div class="form_filtre">
+							<label for="id_filtre_4"><i class="fas fa-dog"></i></label><br />
+							<div>
+								<select name="filtre_4" id="id_filtre_4">
+									<option value="animaux_autorises" select>Animaux autorisés</option>
+									<option value="choix_2">Choix 2</option>
+									<option value="choix_3">Choix 3</option>
+								</select>
+							</div>
+						</div>
 					</form>
 				</div>
 
-				<p>									<!-- annonce résultats -->
-					<img src="" alt="icone annonce résultats" />
-					Plus de 500 logements sont disponibles dans cette ville
-				</p>
+				<div id="nb_results">									<!-- annonce résultats -->
+					<div id="circle_info">
+						<i class="fas fa-info"></i>
+					</div>
+					<p>Plus de 500 logements sont disponibles dans cette ville</p>
+				</div>
 
 			</section>								
 
