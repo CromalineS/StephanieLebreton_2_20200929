@@ -9,17 +9,58 @@ gris 		#F2F2F2
 	font-family: 'Raleway';
 	src: url('polices/Raleway/Raleway-Regular.ttf') format('truetype');
 }
+@font-face /* ok sur GoogleChrome mais trop gras sur Firefox */
+{
+	font-family: 'Raleway ExtraBold';
+	src: url('polices/Raleway/Raleway-ExtraBold.ttf') format('truetype');
+}
 
 body
 {
 	font-family: Raleway, Arial, Sans-Serif;
+	color: #000000;
 }
-
 h1
 {
-	font-size: 1.5em;
+	/*font-family: 'Raleway ExtraBold', 'Arial Black', Sans-Serif;*/
+	font-size: 1.3em;
 }
 h2
 {
-	font-size: 1.3em;
+	font-size: 1em;
+}
+
+#page
+{
+	width: 90%;
+	margin: auto;
+}
+
+#head
+{
+	display: flex;
+	justify-content: space-between;
+}
+#head img
+{
+	width: 100px;
+}
+#head ul
+{
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+}
+#head li
+{
+	padding-left: 30px;
+}
+#head a
+{
+	color: #0065FC;
+	text-decoration: none;
+}
+#head a:hover
+{
+	color: #000000;
 }
