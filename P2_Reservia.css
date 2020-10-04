@@ -23,7 +23,6 @@ body
 }
 h1
 {
-	/*font-family: 'Raleway ExtraBold', 'Arial Black', Sans-Serif;*/
 	font-size: 1.3em;
 }
 h2
@@ -38,7 +37,7 @@ h2
 	margin: auto;
 }
 
-/*header*/
+/* --------------------HEADER : logo et menu--------------------*/
 #head
 {
 	display: flex;
@@ -68,30 +67,30 @@ h2
 	color: #000000;
 }
 
-/* formulaire de recherche */
+/* -------------SECTION 1 : formulaires de recherche------------ */
 #search
 {
 
 }
-#form_search
+#form_search						/* enveloppe fomulaire */
 {
 	display: flex;
 	justify-content: flex-start;
-	align-items: stretch;			/*ajustement hauteurs des éléments de la barre de recherche*/
+	align-items: stretch;			/* ajustement hauteurs des éléments de la barre de recherche */
 }
-.icone_place
+.icone_place						/* fond icone lieu */
 {
 	border-radius: 15px 0 0 15px;
 	background-color: #F2F2F2;
-	padding: 10px 15px;
+	padding: 10px 15px;				/* centrage icone lieu ok */
 }
-.search_text
+.search_text						/* zone de texte */
 {
 	font-weight: bold;
 	padding: 10px;
 	border: solid 2px #F2F2F2;
 }
-.submit
+.submit								/* bouton envoi */
 {
 	color: #FFFFFF;
 	font-weight: bold;
@@ -100,6 +99,12 @@ h2
 	background-color: #0065FC;
 	padding: 10px;
 	cursor: pointer;
+}
+
+/* icone • barre de recherche */
+#search .fas
+{
+	color: #000000;					/* icone lieu couleur */
 }
 
 /* filtres */
@@ -122,15 +127,15 @@ h2
 	background-color: #DEEBFF;
 	display: flex;			/* pour centrage vertical et horizontal des icones dans le cercle → class .fas : margin auto */
 }
-#filtres select
+#filtres select				
 {
 	font-weight: bold;
 	padding: 10px;
-	width: 120%;
+	width: 120%;			/* largeur > 100% pour masquer la flèche des balises select */
 	border: none;
 	cursor: pointer;
 }
-.form_filtre
+.form_filtre				/* enveloppes formulaires */
 {
 	display: flex;
 	flex-direction: row;
@@ -138,10 +143,10 @@ h2
 	align-items: center;
 	border: solid 2px #F2F2F2;
 	border-radius: 20px;
-	overflow: hidden;
+	overflow: hidden;		/* pour masquer les flèches des balises select */
 }
 
-/* annonce résultat */
+/* annonce nombre de résultats */
 #circle_info
 {
 	width: 20px;			/* créa cercle */
@@ -158,9 +163,124 @@ h2
 	align-items: center;
 }
 
-/* icones : centrage vertical et horizontal dans les cercles flex & couleur */
+/* icones • filtres & annonce nombre de resultats */ 
 #filtres .fas, #nb_results .fas
 {
-	margin: auto;
+	margin: auto;		/* centrage vertical et horizontal dans les cercles flex */
 	color: #0065FC;	
+}
+
+/* --------------------SECTION 2 : résultats----------------- */
+#results
+{
+	display: flex;
+	justify-content: space-between;
+}
+#all_results, #best_results
+{
+    border-radius: 20px;
+    background-color: #F2F2F2;
+    padding: 0 30px;
+}
+#results a
+{
+	color: #000000;
+	text-decoration: none;
+}
+.card_1:hover, .card_2:hover
+{
+	background-color: #DEEBFF;
+}
+
+/* tous les résultats */
+#all_results
+{
+	width: 65%;
+	margin-right: 3%;		/* gouttière */
+}
+#content_1
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.card_1
+{
+	width: 30%;
+	border-radius: 15px;
+	background-color: #ffffff;
+	margin-bottom: 30px;
+	padding: 5px 5px 0 5px;
+	box-shadow: 2px 2px 10px #C2C2C2;
+}
+.content_img_1
+{
+	height: 130px;
+	border-radius: 10px 10px 0 0;
+	overflow: hidden;
+}
+.content_img_1 img 
+{
+	height: 100%;
+	min-width: 100%;		/* pour couverture entière du content au zoom */
+}
+.card_1 h2, .card_1			/* infos card_1 */
+{
+	padding: 0 10px;
+}
+a[title="afficher plus"]
+{
+	font-weight: bold;
+}
+a[title="afficher plus"]:hover /* ne fonctionne pas !!!!! */
+{
+	color: red;
+}
+
+/* résultats les plus polulaires */
+#best_results
+{
+	width: 25%;
+}
+#content_2
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.card_2
+{
+	border-radius: 15px;
+	background-color: #ffffff;
+	margin-bottom: 30px;
+	padding: 5px 0 5px 5px;
+	box-shadow: 2px 2px 10px #C2C2C2;
+	display: flex;
+	justify-content: space-between;
+}
+.content_img_2
+{
+	width: 40%;
+	height: 150px;
+	border-radius: 10px 0 0 10px;
+	overflow: hidden;
+}
+.content_img_2 img
+{
+	width: 100%;
+	min-height: 100%;		/* pour couverture entière du content au zoom */
+}
+.info_card_2				/* infos card_2 */
+{
+	width: 55%;
+}
+
+/* icones • résultats & résultats les + populaires : chart-line & étoiles évaluation */
+#content_2 				
+{
+	color: #000000;
+}
+#content_1 .fas, #content_1 .far, #content_3 .fas, #content_3 .far
+{
+	color: #000000;	/* couleur maquette : #0065FC • perso : design plus joli en noir */
 }
