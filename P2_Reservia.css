@@ -174,6 +174,7 @@ h2
 #results
 {
 	display: flex;
+	/*flex-wrap: wrap;*/
 	justify-content: space-between;
 }
 #all_results, #best_results
@@ -224,7 +225,7 @@ h2
 	height: 100%;
 	min-width: 100%;		/* pour couverture entière du content au zoom */
 }
-.card_1 h2, .card_1			/* infos card_1 */
+.card_1 h2, .card_1	p		/* infos card_1 */
 {
 	padding: 0 10px;
 }
@@ -232,9 +233,9 @@ a[title="afficher plus"]
 {
 	font-weight: bold;
 }
-a[title="afficher plus"]:hover /* ne fonctionne pas !!!!! */
+a[title="afficher plus"]:hover 
 {
-	color: red;
+	color: red;				/* ne fonctionne pas !!!!! */
 }
 
 /* résultats les plus polulaires */
@@ -283,4 +284,78 @@ a[title="afficher plus"]:hover /* ne fonctionne pas !!!!! */
 #content_1 .fas, #content_1 .far, #content_3 .fas, #content_3 .far
 {
 	color: #000000;	/* couleur maquette : #0065FC • perso : design plus joli en noir */
+}
+
+/* --------------------SECTION 3 : activitées----------------- */
+#activity
+{
+	margin-top: 50px;
+}
+#content_4
+{
+	display: flex;
+	/*flex-wrap: wrap; 				/* ne fonctionne pas !!! */
+	justify-content: space-between;
+}
+.content_4_1
+{
+	width: 22%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.content_4_1 h2
+{
+	padding: 5px 10px;
+}
+.content_4_1 img
+{
+	width: 100%;
+}
+
+.content_4_1 a
+{
+	color: #000000;
+	text-decoration: none;
+}
+.content_4_1 :hover
+{
+	background-color: #DEEBFF;
+}
+.activity
+{
+	border-radius: 15px;
+	box-shadow: 2px 2px 10px #C2C2C2;
+	overflow: hidden;
+}
+
+/* ------------------------FOOTER------------------------*/
+footer
+{
+	background-color: #F2F2F2;
+	margin-top: 50px;
+}
+#content_5
+{
+	width: 90%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+.footer
+{
+	width: 30%;
+}
+.footer ul
+{
+	list-style: none;
+}
+.footer a
+{
+	color: #000000;
+	text-decoration: none;
+}
+.footer a:hover
+{
+	color: #0065FC;
 }
