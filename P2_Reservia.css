@@ -223,6 +223,8 @@ h3
 .card_1 img
 {
 	width: 100%;
+	height: 9em;
+	object-fit: cover;
 	border-radius: 10px 10px 0 0;
 }
 .card_1 h3, .card_1	p		/* infos card_1 */
@@ -258,16 +260,18 @@ a[title="afficher plus"]:hover
 	box-shadow: 2px 2px 10px #C2C2C2;
 	display: flex;
 	justify-content: space-between;
+	height: 10em;
 }
 .content_img_2
 {
 	width: 40%;
-	height: 150px;
+	height: 100%;
 }
 .content_img_2 img
 {
 	width: 100%;
 	height: 100%;
+	object-fit: cover;
 	border-radius: 10px 0 0 10px;
 }
 .info_card_2				/* infos card_2 */
@@ -296,7 +300,6 @@ a[title="afficher plus"]:hover
 #content_4
 {
 	display: flex;
-	/*flex-wrap: wrap; 				/* ne fonctionne pas !!! */
 	justify-content: space-between;
 }
 .content_4_1
@@ -308,29 +311,57 @@ a[title="afficher plus"]:hover
 }
 .content_4_1 h3
 {
-	padding: 5px 10px;
+	padding: 5px 20px;
 }
-.content_4_1 img
-{
-	width: 100%;
-}
-
 .content_4_1 a
 {
 	color: #000000;
 	text-decoration: none;
 }
-.content_4_1 :hover
+.content_4_1 a:hover
 {
 	background-color: #DEEBFF;
 }
-.activity
+.activity_1, .activity_2, .activity_3, .activity_4, .activity_5
 {
 	border-radius: 15px;
 	box-shadow: 2px 2px 10px #C2C2C2;
 	overflow: hidden;
 }
-
+.content_4_1 img
+{
+	object-fit: cover;
+}
+.activity_1 img
+{
+	width: 220%;
+	height: 33em;
+	object-position: -16em 0;
+}
+.activity_2 img
+{
+	width: 100%;
+	height: 15em;
+	object-position: 50% 40%;
+}
+.activity_3 img
+{
+	width: 100%;
+	height: 9em;
+	object-position: 50% 25%;
+}
+.activity_4 img
+{
+	width: 100%;
+	height: 12em;
+	object-position: 50% 5%;
+}
+.activity_5 img
+{
+	width: 100%;
+	height: 13em;
+	object-position: 50% 15%;
+}
 /* ------------------------FOOTER------------------------*/
 footer
 {
