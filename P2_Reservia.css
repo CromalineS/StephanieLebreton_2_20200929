@@ -21,11 +21,11 @@ body
 	color: #000000;
 
 }
-h1
+h1, h2
 {
 	font-size: 1.3em;
 }
-h2
+h3
 {
 	font-size: 1em;
 }
@@ -225,7 +225,7 @@ h2
 	width: 100%;
 	border-radius: 10px 10px 0 0;
 }
-.card_1 h2, .card_1	p		/* infos card_1 */
+.card_1 h3, .card_1	p		/* infos card_1 */
 {
 	padding: 0 10px;
 }
@@ -306,7 +306,7 @@ a[title="afficher plus"]:hover
 	flex-direction: column;
 	justify-content: space-between;
 }
-.content_4_1 h2
+.content_4_1 h3
 {
 	padding: 5px 10px;
 }
