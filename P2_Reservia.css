@@ -37,41 +37,76 @@ h3
 	margin: auto;
 }
 
+@media all and (max-width: 480px)
+{
+	#page
+	{
+		width: auto;
+	}
+}
+
 /* --------------------HEADER : logo et menu--------------------*/
 #head
 {
 	display: flex;
 	justify-content: space-between;
+	/*align-items: center;*/
+		/*border: solid 1px red;*/
 }
 #head img
 {
 	width: 100px;
+		/*border: solid 1px green;*/
 }
-#head ul
+nav ul
 {
 	list-style: none;
 	display: flex;
 	justify-content: space-between;
+		/*border: solid 1px blue;*/
 }
-#head li
+nav li
 {
 	padding-left: 30px;
+		/*border: solid 1px orange;*/
 }
-#head a
+nav a
 {
 	color: #0065FC;
 	text-decoration: none;
 }
-#head a:hover
+nav a:hover
 {
 	color: #000000;
 }
 
-/* -------------SECTION 1 : formulaires de recherche------------ */
-#search
+@media all and (min-width: 480px) and (max-width: 1023px)
 {
-
+	nav ul
+	{
+		flex-direction: column;
+	}
+	nav li
+	{
+		padding-bottom: 5px;
+		text-align: right;
+	}
 }
+
+@media all and (max-width: 480px)
+{
+	nav ul
+	{
+		flex-wrap: wrap-reverse;
+		justify-content: flex-end;
+	}
+	nav li
+	{
+		margin-bottom: 20px;
+	}
+}
+
+/* -------------SECTION 1 : formulaires de recherche------------ */
 #form_search						/* enveloppe fomulaire */
 {
 	display: flex;
@@ -115,10 +150,16 @@ h3
 	align-items: center;
 	font-weight: bold;
 }
-#filtres form
+#filtres_responsive
 {
-	margin-left: 20px;
+	display: flex;
+	justify-content: flex-start;
 }
+#filtres p, #filtres form
+	{
+		margin-right: 20px;
+		margin-left: 0;
+	}
 #filtres label
 {
 	width: 35px;			/* créa cercle */
@@ -148,6 +189,21 @@ h3
 .form_filtre:hover
 {
 	border: solid 2px #0065FC;
+}
+@media all and (max-width: 1023px)
+{
+	#filtres
+	{
+		flex-wrap: wrap;
+	}
+	#filtres_responsive
+	{
+		flex-wrap: wrap;
+	}
+	#filtres p, #filtres form
+	{
+		margin: 0 10px 10px 0;
+	}
 }
 
 /* annonce nombre de résultats */
@@ -179,7 +235,6 @@ h3
 #results
 {
 	display: flex;
-	/*flex-wrap: wrap;*/
 	justify-content: space-between;
 	margin-top: 20px;
 }
@@ -244,6 +299,7 @@ a[title="afficher plus"]:hover
 #best_results
 {
 	width: 25%;
+	min-width: 350px;	/* pour les alignement des box aux transitions responsives*/
 }
 #content_2
 {
@@ -253,6 +309,8 @@ a[title="afficher plus"]:hover
 }
 .card_2
 {
+	height: 10em;
+	min-width: 350px;	/* pour les alignement des box aux transitions responsives*/
 	border-radius: 15px;
 	background-color: #ffffff;
 	margin-bottom: 30px;
@@ -260,7 +318,6 @@ a[title="afficher plus"]:hover
 	box-shadow: 2px 2px 10px #C2C2C2;
 	display: flex;
 	justify-content: space-between;
-	height: 10em;
 }
 .content_img_2
 {
@@ -282,10 +339,47 @@ a[title="afficher plus"]:hover
 	justify-content: space-between;
 }
 
+
+@media all and (min-width: 480px) and (max-width: 1023px)
+{
+	#results
+	{
+		flex-wrap: wrap-reverse;
+	}
+	#all_results, #best_results
+	{
+		width: auto;
+		margin: 0;
+	}
+	#all_results
+	{
+		background-color: initial;
+	}
+	#content_3
+	{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	#content_3 div[class="width-responsive"]
+	{
+		width: 30%;
+		min-width: 350px;	/*valeurs lignes 302 et 313*/
+	}
+}
+
+
+
+
+
 /* icones • résultats & résultats les + populaires : chart-line & étoiles évaluation */
 #content_2 				
 {
 	color: #000000;
+}
+#content_2 a:hover
+{
+	color: #0065FC;
 }
 #content_1 .fas, #content_1 .far, #content_3 .fas, #content_3 .far
 {
