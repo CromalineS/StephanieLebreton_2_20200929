@@ -41,68 +41,92 @@ h3
 {
 	#page
 	{
-		width: auto;
+		width: 100%;
 	}
 }
 
 /* --------------------HEADER : logo et menu--------------------*/
-#head
+#nav_max
 {
 	display: flex;
 	justify-content: space-between;
-	/*align-items: center;*/
-		/*border: solid 1px red;*/
+	align-items: flex-end;
 }
-#head img
+#nav_max .logo img
 {
-	width: 100px;
+	width: 90px;
+	border-top: solid 2px #FFFFFF;			/* évite le décalage dû au hover des titres du menu */
 		/*border: solid 1px green;*/
 }
-nav ul
+.menu_nav_max
 {
-	list-style: none;
+	display: flex;
+	justify-content: flex-end;
+		/*border: solid 1px red;*/
+}
+.menu_nav_max div
+{
+	padding: 25px 20px 15px 20px;
+	border-top: solid 2px #FFFFFF;			/* évite le décalage dû au hover des titres du menu */
+		/*border: solid 1px yellow;*/
+}
+.menu_nav_max div:hover
+{
+	border-top: solid 2px #0065FC;
+}
+.menu_nav_min
+{
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
-		/*border: solid 1px blue;*/
+	align-items: center;				/* alignement vertical première ligne */
+		/*border: solid 1px green;*/
 }
-nav li
+.menu_nav_min .logo, .menu_nav_min .inscription
 {
-	padding-left: 30px;
-		/*border: solid 1px orange;*/
+	padding-left: 20px;
+	padding-right: 20px;
+		/*border: solid 1px yellow;*/
 }
-nav a
+.menu_nav_min .sections
 {
-	color: #0065FC;
-	text-decoration: none;
+	width: 50%;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	border-bottom: solid 3px #F2F2F2;
 }
-nav a:hover
+.menu_nav_min .sections:hover
+{
+	border-bottom: solid 3px #0065FC;
+}
+.menu_nav_max .sections a, .menu_nav_min .sections a
 {
 	color: #000000;
+	text-decoration: none;
 }
-
-@media all and (min-width: 480px) and (max-width: 1023px)
+.menu_nav_max .sections a:hover, .menu_nav_min .sections a:hover
 {
-	nav ul
+	color: #0065FC;
+}
+.menu_nav_max .inscription a, .menu_nav_min .inscription a
+{
+	color: #0065FC;
+	font-weight: bold;
+	text-decoration: none;
+}
+@media all and (min-width: 480px)
+{
+	#nav_min
 	{
-		flex-direction: column;
-	}
-	nav li
-	{
-		padding-bottom: 5px;
-		text-align: right;
+		display: none;
 	}
 }
-
-@media all and (max-width: 480px)
+@media all and (max-width: 479px)
 {
-	nav ul
+	#nav_max
 	{
-		flex-wrap: wrap-reverse;
-		justify-content: flex-end;
-	}
-	nav li
-	{
-		margin-bottom: 20px;
+		display: none;
 	}
 }
 
@@ -172,7 +196,7 @@ nav a:hover
 {
 	font-weight: bold;
 	padding: 10px;
-	width: 120%;			/* largeur > 100% pour masquer la flèche des balises select */
+	width: 150%;			/* largeur > 100% pour masquer la flèche des balises select */
 	border: none;
 	cursor: pointer;
 }
@@ -286,13 +310,9 @@ nav a:hover
 {
 	padding: 0 10px;
 }
-a[title="afficher plus"]
+.test_lien:hover
 {
-	font-weight: bold;
-}
-a[title="afficher plus"]:hover 
-{
-	color: red;				/* ne fonctionne pas !!!!! */
+	color: red;
 }
 
 /* résultats les plus polulaires */
