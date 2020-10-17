@@ -41,7 +41,7 @@ h3
 {
 	#page
 	{
-		width: 100%;
+		width: auto;
 	}
 }
 
@@ -84,8 +84,8 @@ h3
 }
 .menu_nav_min .logo, .menu_nav_min .inscription
 {
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
 		/*border: solid 1px yellow;*/
 }
 .menu_nav_min .sections
@@ -136,12 +136,14 @@ h3
 	display: flex;
 	justify-content: flex-start;
 	align-items: stretch;			/* ajustement hauteurs des éléments de la barre de recherche */
+	margin-bottom: 15px;
 }
-.icone_place						/* fond icone lieu */
+.icone_place						/* fond et position icone lieu */
 {
-	border-radius: 15px 0 0 15px;
+	border-radius: 12px 0 0 12px;
 	background-color: #F2F2F2;
-	padding: 10px 15px;				/* centrage icone lieu ok */
+	padding: 10px 15px;			/* taille background */
+	display: flex;				/* pour centrage vertical et horizontal de l'icone lieu → class .fas : margin auto */
 }
 .search_text						/* zone de texte */
 {
@@ -149,23 +151,47 @@ h3
 	padding: 10px;
 	border: solid 2px #F2F2F2;
 }
-.submit								/* bouton envoi */
+.submit_max							/* bouton envoi */
 {
 	color: #FFFFFF;
 	font-weight: bold;
-	border-radius: 0 15px 15px 0;
-	border: solid 1px #0065FC;
+	border-radius: 0 12px 12px 0;
+	border: none;
 	background-color: #0065FC;
 	padding: 10px;
 	cursor: pointer;
 }
-
-/* icone • barre de recherche */
-#search .fas
+.submit_min
 {
-	color: #000000;					/* icone lieu couleur */
+	height: 20px;					/* taille icone loupe */
+	color: #FFFFFF;
+	font-weight: bold;
+	border-radius: 0 12px 12px 0;
+	border: none;
+	background-color: #0065FC;
+	padding: 10px 15px;				/* taille background */
+	cursor: pointer;
 }
-
+/* icone • barre de recherche */
+#form_search .fas
+{
+	color: #000000;		/* icone lieu couleur */
+	margin: auto;		/* centrage vertical et horizontal icone lieu */
+}
+@media all and (min-width: 480px)
+{
+	.submit_min
+	{
+		display: none;
+	}
+}
+@media all and (max-width: 479px)
+{
+	.submit_max
+	{
+		display: none;
+	}
+}
 /* filtres */
 #filtres
 {
@@ -180,10 +206,10 @@ h3
 	justify-content: flex-start;
 }
 #filtres p, #filtres form
-	{
-		margin-right: 20px;
-		margin-left: 0;
-	}
+{
+	margin-right: 20px;
+	margin-left: 0;
+}
 #filtres label
 {
 	width: 35px;			/* créa cercle */

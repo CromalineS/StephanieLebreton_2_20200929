@@ -53,14 +53,14 @@
 			<section>									<!-- SECTION 1 : recherche -->
 				<h1>Trouvez votre hébergement pour des vacances de rêve</h1>
 				<p>En plein centre-ville ou en pleine nature</p>
-				<form method="post" action="#" > 	<!-- recherche lieu -->
-					<p id="form_search">
-						<label for="id_search" class="icone_place"><i class="fas fa-map-marker-alt"></i></label>
-		            	<input type="search" name="search" id="id_search" class="search_text" value="Marseille, France"> <!-- id_search : identifiant permettant de lier le label à la zone de texte du formulaire = identifiant de l'élément HTML-->
-		            	<input type="submit" value="Rechercher" class="submit">
-					</p>
-				</form>
-
+					<form method="post" action="#" > 	<!-- recherche lieu -->
+						<div id="form_search">
+								<label for="id_search" class="icone_place"><i class="fas fa-map-marker-alt"></i></label>
+				            	<input type="search" name="search" id="id_search" class="search_text" value="Marseille, France"> <!-- id_search : identifiant permettant de lier le label à la zone de texte du formulaire = identifiant de l'élément HTML-->
+				            	<input type="submit" value="Rechercher" class="submit_max">
+				            	<input type="image" src="icones/search-solid.svg" class="submit_min">
+						</div>
+					</form>
 				<div id="filtres">						<!-- filtres -->
 					<p>Filtres</p>
 					<div id="filtres_responsive">
