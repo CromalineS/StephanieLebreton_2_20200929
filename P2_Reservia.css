@@ -192,16 +192,17 @@ nav > div:nth-child(3) a
 	justify-content: flex-start;
 	align-items: center;
 	font-weight: bold;
+	margin-top: 20px;
 }
-#box_filtres
+#filtres form
 {
 	display: flex;
 	flex-wrap: wrap; /*for responsive*/
 	justify-content: flex-start;
 }
-#filtres p, #filtres form
+#filtres p, .form_filtre
 {
-	margin: 0 20px 0 0;
+	margin-right: 20px;
 }
 #filtres label
 {
@@ -215,6 +216,7 @@ nav > div:nth-child(3) a
 {
 	width: 150%;				/* largeur > 100% pour masquer la flèche des balises select */
 	font-weight: bold;
+	background: #FFFFFF;		/* vu sur navigateurs mobile et tablette (opéra par ex) background par défaut gris */
 	padding: 10px;
 	border: none;
 	cursor: pointer; 
@@ -236,7 +238,7 @@ nav > div:nth-child(3) a
 
 @media all and (max-width: 959px)
 {
-	#filtres p, #filtres form 	/* ajustement : réduction right - ajout bottom*/
+	#filtres p, .form_filtre	/* ajustement : réduction right - ajout bottom*/
 	{
 		margin: 0 10px 10px 0;
 	}
