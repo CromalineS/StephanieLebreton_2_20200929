@@ -44,89 +44,78 @@ main
 {
 	main
 	{
-		width: auto;
+		width: 100%;
 	}
-	section 				/* 1 - ajustement marges → .menu_nav_min .img et .menu_nav_min .inscription */
+	section 				/*ajustement marges*/
 	{
-		padding-left: 10px;
-		padding-right: 10px;
+		width: 95%;
+		margin: auto;
+		border: solid 1px red;
 	}
 }
 
 /* --------------------HEADER : logo et menu--------------------*/
-
-#nav_max
+nav
 {
 	display: flex;
-	justify-content: space-between;
-	align-items: flex-end;
-}
-.menu_nav_max
-{
-	display: flex;
+	flex-wrap: wrap;
 	justify-content: flex-end;
 }
-.menu_nav_max div
+nav > div:nth-child(1)
 {
-	padding: 25px 20px 15px 20px;
-	border-top: solid 2px #FFFFFF;			/* évite le décalage dû au hover des titres du menu */
+	padding-top: 10px;
+	position: absolute;
+	left: 5%;
 }
-.menu_nav_max div:hover
+nav > div:nth-child(2)
+{
+	display: flex;
+}
+nav > div:nth-child(2) div, nav > div:nth-child(3)
+{
+	padding: 25px 12px 15px 12px;
+	border-top: solid 2px #FFFFFF;			/*  évite le décalage dû au hover des titres du menu */
+}
+nav > div:nth-child(2) div:hover, nav > div:nth-child(3):hover
 {
 	border-top: solid 2px #0065FC;
 }
-.menu_nav_min
-{
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;				/* alignement vertical première ligne */
-}
-.menu_nav_min img, .menu_nav_min .inscription	/* 1 - ajustement marges idem section de @media all and (max-width: 479px) général */
-{
-	padding-left: 10px;
-	padding-right: 10px;
-}
-.menu_nav_min .sections
-{
-	width: 50%;
-	text-align: center;
-	padding-top: 20px;
-	padding-bottom: 10px;
-	border-bottom: solid 3px #F2F2F2;
-}
-.menu_nav_min .sections:hover
-{
-	border-bottom: solid 3px #0065FC;
-}
-.menu_nav_max .sections a, .menu_nav_min .sections a
+nav div a
 {
 	color: #000000;
 	text-decoration: none;
 }
-.menu_nav_max .sections a:hover, .menu_nav_min .sections a:hover
+nav > div:nth-child(2) a:hover
 {
 	color: #0065FC;
 }
-.menu_nav_max .inscription a, .menu_nav_min .inscription a
+nav > div:nth-child(3) a
 {
 	color: #0065FC;
 	font-weight: bold;
 	text-decoration: none;
 }
 
-@media all and (min-width: 480px)
-{
-	#nav_min
-	{
-		display: none;
-	}
-}
 @media all and (max-width: 479px)
 {
-	#nav_max
+	nav > div:nth-child(3)
 	{
-		display: none;
+		order: -1;
+	}
+	nav > div:nth-child(2)
+	{
+		width: 100%;
+		text-align: center;
+	}
+	nav > div:nth-child(2) div
+	{
+		width: 50%;
+		border-bottom: solid 2px #F2F2F2;
+	}
+	nav > div:nth-child(2) div:hover
+	{
+		border-bottom: solid 2px #0065FC;
+		border-top: solid 2px #FFFFFF;		/*  évite le décalage dû au hover des titres du menu */
 	}
 }
 
